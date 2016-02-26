@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-    pygments.styles.monokailight
+    pygments.styles.prism
     ~~~~~~~~~~~~~~~~~~~~~~~
 
-    Mimic the Monokai light color scheme. Based on tango.py.
-
-    http://www.monokai.nl/blog/2006/07/15/textmate-color-theme/
+    Mimic the prism.js color scheme.
 
     :copyright: Copyright 2006-2013 by the Pygments team, see AUTHORS.
     :license: BSD, see LICENSE for details.
@@ -15,13 +13,16 @@ from pygments.style import Style
 from pygments.token import Keyword, Name, Comment, String, Error, Text, \
      Number, Operator, Generic, Whitespace, Punctuation, Other, Literal
 
-class MonokaiLightStyle(Style):
+class PrismStyle(Style):
     """
-    This style mimics the Monokai color scheme.
+    prism.js default color scheme.
     """
 
     background_color = "#fafafa" #272822
     highlight_color = "#e6e3c3" #49483e
+
+    keywordsColor = "#0077aa"
+    textColor = "#000000"
 
     styles = {
         # No corresponding class for the following:
@@ -31,12 +32,12 @@ class MonokaiLightStyle(Style):
         Other:                     "",        # class 'x'
 
         Comment:                   "#75715e", # class: 'c'
-        Comment.Multiline:         "",        # class: 'cm'
+        Comment.Multiline:         "#5fcda6", # class: 'cm'
         Comment.Preproc:           "",        # class: 'cp'
         Comment.Single:            "",        # class: 'c1'
         Comment.Special:           "",        # class: 'cs'
 
-        Keyword:                   "#00a8c8", # class: 'k'
+        Keyword:                   keywordsColor, # class: 'k'
         Keyword.Constant:          "",        # class: 'kc'
         Keyword.Declaration:       "",        # class: 'kd'
         Keyword.Namespace:         "#f92672", # class: 'kn'
@@ -44,25 +45,25 @@ class MonokaiLightStyle(Style):
         Keyword.Reserved:          "",        # class: 'kr'
         Keyword.Type:              "",        # class: 'kt'
 
-        Operator:                  "#f92672", # class: 'o'
+        Operator:                  "#a67f59", # class: 'o'
         Operator.Word:             "",        # class: 'ow' - like keywords
 
         Punctuation:               "#111111", # class: 'p' #f8f8f2
 
         Name:                      "#111111", # class: 'n'
-        Name.Attribute:            "#75af00", # class: 'na' - to be revised
+        Name.Attribute:            textColor, # class: 'na' - to be revised
         Name.Builtin:              "",        # class: 'nb'
         Name.Builtin.Pseudo:       "",        # class: 'bp'
-        Name.Class:                "#75af00", # class: 'nc' - to be revised
-        Name.Constant:             "#00a8c8", # class: 'no' - to be revised
-        Name.Decorator:            "#75af00", # class: 'nd' - to be revised
+        Name.Class:                "#990055", # class: 'nc' - to be revised
+        Name.Constant:             keywordsColor, # class: 'no' - to be revised
+        Name.Decorator:            textColor, # class: 'nd' - to be revised
         Name.Entity:               "",        # class: 'ni'
-        Name.Exception:            "#75af00", # class: 'ne'
-        Name.Function:             "#75af00", # class: 'nf'
-        Name.Property:             "",        # class: 'py'
+        Name.Exception:            textColor, # class: 'ne'
+        Name.Function:             textColor, # class: 'nf'
+        Name.Property:             "#990055", # class: 'py'
         Name.Label:                "",        # class: 'nl'
         Name.Namespace:            "",        # class: 'nn' - to be revised
-        Name.Other:                "#75af00", # class: 'nx'
+        Name.Other:                textColor, # class: 'nx'
         Name.Tag:                  "#f92672", # class: 'nt' - like a keyword
         Name.Variable:             "",        # class: 'nv' - to be revised
         Name.Variable.Class:       "",        # class: 'vc' - to be revised
@@ -77,9 +78,9 @@ class MonokaiLightStyle(Style):
         Number.Oct:                "",        # class: 'mo'
 
         Literal:                   "#ae81ff", # class: 'l'
-        Literal.Date:              "#d88200", # class: 'ld'
+        Literal.Date:              "#a67f59", # class: 'ld'
 
-        String:                    "#d88200", # class: 's'
+        String:                    "#669900", # class: 's'
         String.Backtick:           "",        # class: 'sb'
         String.Char:               "",        # class: 'sc'
         String.Doc:                "",        # class: 'sd' - like a comment
@@ -88,7 +89,7 @@ class MonokaiLightStyle(Style):
         String.Heredoc:            "",        # class: 'sh'
         String.Interpol:           "",        # class: 'si'
         String.Other:              "",        # class: 'sx'
-        String.Regex:              "",        # class: 'sr'
+        String.Regex:              "#a67f59", # class: 'sr'
         String.Single:             "",        # class: 's1'
         String.Symbol:             "",        # class: 'ss'
 

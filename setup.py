@@ -4,7 +4,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.4'
+version = '0.6.4'
 long_description = '\n'.join([
     open('README.rst').read(),
     ])
@@ -21,21 +21,21 @@ classifiers = [
 ]
 
 setup(
-    name='pygments-style-monokailight',
+    name='pygments-style-prism-default',
     version=version,
-    description='Pygments version of the monokai theme for light backgrounds.',
+    description='Pygments version of the prism.js default color scheme',
     long_description=long_description,
     classifiers=classifiers,
-    keywords=['pygments', 'style', 'monokai', 'syntax highlighting'],
-    author='Michelle Gill',
-    author_email='michelle@michellelynngill.com',
-    url='https://github.com/mlgill/pygments-style-monokailight',
+    keywords=['pygments', 'style', 'prism.js', 'syntax highlighting'],
+    author='Pierre-Luc BLOT',
+    author_email='pierreluc.blot@gmail.com',
+    url='https://github.com/pierre-luc/pygments-style-prism-default',
     license='MIT',
     packages=find_packages(),
     install_requires=['pygments >= 1.5'],
     entry_points="""
         [pygments.styles]
-        monokailight=pygments_style_monokailight:MonokaiLightStyle
+        prism=pygments_style_prism:PrismStyle
     """,
     zip_safe=False,
 )
