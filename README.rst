@@ -10,7 +10,7 @@ Source
 
    $ git clone https://github.com/pierre-luc/pygments-style-prism-default
    $ cd pygments-style-prism-default
-   $ python setup.py install
+   $ sudo make
 
 
 Usage Sample
